@@ -149,3 +149,26 @@ body {
   background-color: #aa383b;
   border-color: #aa383b;
 }
+
+.about-page-text {
+  font-size: 16px;
+  padding: 15px;
+  line-height: 20px;
+}
+
+/**Walthamstuff link **/
+.ws-link-right {
+  display: block;
+  float: right;
+  padding-top: 30px;
+  padding-right: 30px;
+}
+
+.ws-link-right a {
+  color: #4B5361;
+  text-decoration: none;
+}
+
+.ws-link-red {
+  color: #ed1010;
+}
