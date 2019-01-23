@@ -14,7 +14,7 @@ function initialize(cat) {
     GeoMarker.setCircleOptions({fillColor: '#808080'});
 
     if (typeof cat === 'string' || cat === undefined) {
-        getJSON('//maps.walthamstuff.com/api/index.php/locations/category/'+encodeURIComponent(cat), function(err, data) {
+        getJSON('//maps.walthamstuff.com/e17-art-trail/api/index.php/locations/category/'+encodeURIComponent(cat), function(err, data) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);
             } else {
@@ -54,7 +54,7 @@ function initialize(cat) {
             }
         });
     } else {
-        getJSON('//maps.walthamstuff.com/api/index.php/locations', function(err, data) {
+        getJSON('//maps.walthamstuff.com/e17-art-trail/api/index.php/locations', function(err, data) {
             if (err !== null) {
                 alert('Something went wrong: ' + err);
             } else {
@@ -148,7 +148,7 @@ function geocodeIteration(data) {
                     console.log(lat, lon, id);
 
                     var xhttp = new XMLHttpRequest();
-                    xhttp.open("POST", "//maps.walthamstuff.com/api/index.php/locations/post_latlon", true);
+                    xhttp.open("POST", "//maps.walthamstuff.com/e17-art-trail/api/index.php/locations/post_latlon", true);
                     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                     xhttp.send('id='+id+'&lat='+lat+'&lon='+lon);
                 // }
@@ -169,7 +169,7 @@ function geocodeIteration(data) {
 function codeAddress() {
     geocoder = new google.maps.Geocoder();
 
-    getJSON('//maps.walthamstuff.com/api/index.php/locations/no_latlon', function(err, data) {
+    getJSON('//maps.walthamstuff.com/e17-art-trail/api/index.php/locations/no_latlon', function(err, data) {
         if (err !== null) {
             alert('Something went wrong: ' + err);
         } else {
