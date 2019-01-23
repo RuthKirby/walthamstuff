@@ -28,7 +28,7 @@ function createCategoryList() {
 }
 
 window.onload = function () {
-    getJSON('//maps.walthamstuff.com/api/index.php/locations', function(err, data) {
+    getJSON('//maps.walthamstuff.com/e17-art-trail/api/index.php/locations', function(err, data) {
         if (err !== null) {
             alert('Something went wrong: ' + err);
         } else {
